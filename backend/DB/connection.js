@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-// const DB = "mongodb://localhost:27017/ZairaOrganicSkincareDB";
-
 mongoose.set("strictQuery", true);
 mongoose
   .connect(process.env.DB, {
@@ -12,6 +10,15 @@ mongoose
     console.log("mongoose is connected");
   })
   .catch((err) => console.log("not connected", err));
+
+// mongoose
+//   .connect(process.env.DB, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+//   })
+//   .then(() => console.log("Database Connected Successfully"))
+//   .catch((err) => console.log(err));
 
 mongoose.connection.on("error", (err) => {
   console.log("err", err);

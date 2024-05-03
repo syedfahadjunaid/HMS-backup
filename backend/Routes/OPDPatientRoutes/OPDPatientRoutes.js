@@ -28,11 +28,7 @@ const generateUniqueId = async () => {
     let sequence = 1;
     if (latestOPDPatient) {
       const latestOPDPatientId = latestOPDPatient.mainId;
-<<<<<<< HEAD
       const sequencePart = latestOPDPatientId.substr(6); // Assuming the sequence part starts from the 9th character
-=======
-      const sequencePart = latestOPDPatientId.substr(9, 4); // Assuming the sequence part starts from the 9th character
->>>>>>> 0ccf4a2177dc9b7b2d3ef03a86e93c6ae7abd857
       sequence = parseInt(sequencePart) + 1;
     }
 

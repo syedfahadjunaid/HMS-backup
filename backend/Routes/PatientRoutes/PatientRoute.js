@@ -48,22 +48,14 @@ const generateUniqueId = async () => {
     let sequence = 1;
     if (latestPatient) {
       const latestPatientId = latestPatient.patientId;
-<<<<<<< HEAD
       // const sequencePart = latestPatientId.substr(9, 4); // Assuming the sequence part starts from the 9th character
       const sequencePart = latestPatientId.substr(4);
-=======
-      const sequencePart = latestPatientId.substr(9, 4); // Assuming the sequence part starts from the 9th character
->>>>>>> 0ccf4a2177dc9b7b2d3ef03a86e93c6ae7abd857
       sequence = parseInt(sequencePart) + 1;
     }
 
     // Construct the new patient ID
-<<<<<<< HEAD
     // const paddedSequence = sequence.toString().padStart(6, "0");
     const paddedSequence = sequence.toString().padStart(4, "0");
-=======
-    const paddedSequence = sequence.toString().padStart(6, "0");
->>>>>>> 0ccf4a2177dc9b7b2d3ef03a86e93c6ae7abd857
     const uniqueId = `${year}${paddedSequence}`;
 
     return uniqueId;
@@ -221,10 +213,7 @@ router.put(
     const PatientId = req.params.PatientId;
 
     const {
-<<<<<<< HEAD
       patientId,
-=======
->>>>>>> 0ccf4a2177dc9b7b2d3ef03a86e93c6ae7abd857
       patientName,
       patientEmail,
       patientFatherName,
@@ -293,10 +282,7 @@ router.put(
           patientId: PatientId,
         },
         {
-<<<<<<< HEAD
           patientId: patientId ? patientId : PatientModel.patientId,
-=======
->>>>>>> 0ccf4a2177dc9b7b2d3ef03a86e93c6ae7abd857
           patientName: patientName ? patientName : PatientModel.patientName,
           patientEmail: patientEmail ? patientEmail : PatientModel.patientEmail,
           patientFatherName: patientFatherName
